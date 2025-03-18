@@ -24,5 +24,15 @@ namespace CRM
         {
             InitializeComponent();
         }
+
+        private void ClientsButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new ClientsPage());
+        }
+
+        private void EventsButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new EventsPage());
+        }
     }
 }
