@@ -9,6 +9,21 @@
       Title="ClientsPage">
 
     <Grid>
-        <TextBlock Text="ЗДЕСЬ ПОКА НИЧЕГО НЕТ"/>
+        <DataGrid x:Name="ClientsDataGrid"
+          AutoGenerateColumns="False"
+          CanUserAddRows="True"
+          RowEditEnding="ClientsDataGrid_RowEditEnding">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ClientId}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" />
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding SecondName}" />
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Surename}" />
+                <DataGridTextColumn Header="Телефон" Binding="{Binding PhoneNumber}" />
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" />
+                <DataGridTextColumn Header="День рождения" Binding="{Binding Birthday, StringFormat={}{0:dd.MM.yyyy}}" />
+                <DataGridTextColumn Header="Регистрация" Binding="{Binding Registration, StringFormat={}{0:dd.MM.yyyy}}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Общая сумма" Binding="{Binding Total}" IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
