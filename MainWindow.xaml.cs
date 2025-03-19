@@ -34,5 +34,10 @@ namespace CRM
         {
             MainFrame.Navigate(new EventsPage());
         }
+
+        private void TransactionsButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new TransactionsPage());
+        }
     }
 }

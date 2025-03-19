@@ -59,3 +59,5 @@ C:\Users\yoto8\source\repos\CRM\obj\Debug\ClientsPage.g.cs
 C:\Users\yoto8\source\repos\CRM\obj\Debug\ClientsPage.baml
 C:\Users\yoto8\source\repos\CRM\obj\Debug\EventsPage.g.cs
 C:\Users\yoto8\source\repos\CRM\obj\Debug\EventsPage.baml
+C:\Users\yoto8\source\repos\CRM\obj\Debug\TransactionsPage.g.cs
+C:\Users\yoto8\source\repos\CRM\obj\Debug\TransactionsPage.baml

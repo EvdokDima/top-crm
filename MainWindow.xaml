@@ -15,6 +15,7 @@
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" Height="100" Background="LightGray">
             <Button x:Name="ClientsButton" Height="50" Width="200" Content="Клиенты" FontSize="16" Margin="20" Background="Gray" BorderBrush="Gray" Click="ClientsButton_Click"/>
+            <Button x:Name="TransactionsButton" Height="50" Width="200" Content="Транзакции" FontSize="16" Margin="20" Background="Gray" BorderBrush="Gray" Click="TransactionsButton_Click"/>
             <Button x:Name="EventsButton" Height="50" Width="200" Content="Мероприятия" FontSize="16" Margin="20" Background="Gray" BorderBrush="Gray" Click="EventsButton_Click"/>
         </StackPanel>
 
