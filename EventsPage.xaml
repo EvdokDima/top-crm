@@ -5,10 +5,159 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CRM"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="1000"
       Title="EventsPage">
 
-    <Grid>
-        <TextBlock Text="ЗДЕСЬ ПОКА НИЧЕГО НЕТ"/>
+    <Grid Background="WhiteSmoke" Margin="10">
+        <!-- Основная сетка: заголовок и контент -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- Контент: календарь, список мероприятий и форма добавления -->
+        <Grid Grid.Row="1" Margin="0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Блок календаря -->
+            <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1" 
+                    CornerRadius="5" Background="White" Margin="10" Padding="10">
+                <Calendar x:Name="EventsCalendar" Width="250" 
+                          SelectedDatesChanged="EventsCalendar_SelectedDatesChanged" />
+            </Border>
+
+            <!-- Блок списка мероприятий -->
+            <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1" 
+                    CornerRadius="5" Background="White" Margin="10" Padding="10">
+                <DataGrid x:Name="EventsDataGrid" AutoGenerateColumns="False" 
+                          CanUserAddRows="False" Margin="0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Дата" 
+                                            Binding="{Binding EventDate, StringFormat={}{0:dd.MM.yyyy}}" 
+                                            Width="100"/>
+                        <DataGridTextColumn Header="Начало" 
+                                            Binding="{Binding StartTime, StringFormat={}{0:HH:mm}}" 
+                                            Width="70"/>
+                        <DataGridTextColumn Header="Окончание" 
+                                            Binding="{Binding EndTime, StringFormat={}{0:HH:mm}}" 
+                                            Width="70"/>
+                        <DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
+                        <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="2*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+
+            <!-- Форма добавления мероприятия -->
+            <Border Grid.Column="2" BorderBrush="Gray" BorderThickness="1" 
+                    CornerRadius="5" Background="White" Margin="10" Padding="10">
+                <StackPanel Width="250">
+                    <TextBlock Text="Добавить мероприятие" FontSize="20" 
+                               FontWeight="Bold" Margin="0,0,0,10" />
+
+                    <!-- Поле "Название" -->
+                    <StackPanel Orientation="Vertical" Margin="0,5">
+                        <TextBlock Text="Название:"/>
+                        <TextBox x:Name="TitleTextBox" Margin="0,2" />
+                    </StackPanel>
+
+                    <!-- Поле "Описание" -->
+                    <StackPanel Orientation="Vertical" Margin="0,5">
+                        <TextBlock Text="Описание:"/>
+                        <TextBox x:Name="DescriptionTextBox" Margin="0,2" AcceptsReturn="True" Height="60" TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                    <!-- Время начала -->
+                    <StackPanel Orientation="Vertical" Margin="0,5">
+                        <TextBlock Text="Время начала:"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,2">
+                            <DatePicker x:Name="StartDatePicker" Width="120"/>
+                            <ComboBox x:Name="StartHourComboBox" Width="50" Margin="5,0">
+                                <ComboBoxItem Content="00"/>
+                                <ComboBoxItem Content="01"/>
+                                <ComboBoxItem Content="02"/>
+                                <ComboBoxItem Content="03"/>
+                                <ComboBoxItem Content="04"/>
+                                <ComboBoxItem Content="05"/>
+                                <ComboBoxItem Content="06"/>
+                                <ComboBoxItem Content="07"/>
+                                <ComboBoxItem Content="08"/>
+                                <ComboBoxItem Content="09"/>
+                                <ComboBoxItem Content="10"/>
+                                <ComboBoxItem Content="11"/>
+                                <ComboBoxItem Content="12"/>
+                                <ComboBoxItem Content="13"/>
+                                <ComboBoxItem Content="14"/>
+                                <ComboBoxItem Content="15"/>
+                                <ComboBoxItem Content="16"/>
+                                <ComboBoxItem Content="17"/>
+                                <ComboBoxItem Content="18"/>
+                                <ComboBoxItem Content="19"/>
+                                <ComboBoxItem Content="20"/>
+                                <ComboBoxItem Content="21"/>
+                                <ComboBoxItem Content="22"/>
+                                <ComboBoxItem Content="23"/>
+                            </ComboBox>
+                            <TextBlock Text=":" VerticalAlignment="Center"/>
+                            <ComboBox x:Name="StartMinuteComboBox" Width="50" Margin="5,0">
+                                <ComboBoxItem Content="00"/>
+                                <ComboBoxItem Content="15"/>
+                                <ComboBoxItem Content="30"/>
+                                <ComboBoxItem Content="45"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- Время окончания -->
+                    <StackPanel Orientation="Vertical" Margin="0,5">
+                        <TextBlock Text="Время окончания:"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,2">
+                            <DatePicker x:Name="EndDatePicker" Width="120"/>
+                            <ComboBox x:Name="EndHourComboBox" Width="50" Margin="5,0">
+                                <ComboBoxItem Content="00"/>
+                                <ComboBoxItem Content="01"/>
+                                <ComboBoxItem Content="02"/>
+                                <ComboBoxItem Content="03"/>
+                                <ComboBoxItem Content="04"/>
+                                <ComboBoxItem Content="05"/>
+                                <ComboBoxItem Content="06"/>
+                                <ComboBoxItem Content="07"/>
+                                <ComboBoxItem Content="08"/>
+                                <ComboBoxItem Content="09"/>
+                                <ComboBoxItem Content="10"/>
+                                <ComboBoxItem Content="11"/>
+                                <ComboBoxItem Content="12"/>
+                                <ComboBoxItem Content="13"/>
+                                <ComboBoxItem Content="14"/>
+                                <ComboBoxItem Content="15"/>
+                                <ComboBoxItem Content="16"/>
+                                <ComboBoxItem Content="17"/>
+                                <ComboBoxItem Content="18"/>
+                                <ComboBoxItem Content="19"/>
+                                <ComboBoxItem Content="20"/>
+                                <ComboBoxItem Content="21"/>
+                                <ComboBoxItem Content="22"/>
+                                <ComboBoxItem Content="23"/>
+                            </ComboBox>
+                            <TextBlock Text=":" VerticalAlignment="Center"/>
+                            <ComboBox x:Name="EndMinuteComboBox" Width="50" Margin="5,0">
+                                <ComboBoxItem Content="00"/>
+                                <ComboBoxItem Content="15"/>
+                                <ComboBoxItem Content="30"/>
+                                <ComboBoxItem Content="45"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- Кнопка добавления мероприятия -->
+                    <Button x:Name="AddEventButton" Content="Добавить" Width="120" Margin="0,10,0,0"
+                            Click="AddEventButton_Click" Background="#007ACC" Foreground="White"/>
+                </StackPanel>
+            </Border>
+        </Grid>
     </Grid>
 </Page>
