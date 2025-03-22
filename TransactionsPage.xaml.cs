@@ -32,9 +32,9 @@ namespace CRM
             {
                 using (var conn = new NpgsqlConnection(connectionString))
                 {
-                    conn.Open(); // Проверяем подключение
+                    conn.Open();
                 }
-                LoadData(); // Загружаем данные при инициализации страницы
+                LoadData();
             }
             catch (Exception ex)
             {
@@ -196,16 +196,16 @@ namespace CRM
 
                     if (editedTransaction != null)
                     {
-                        if (editedTransaction.TranzactionId == 0) // Если TranzactionId = 0, это новая запись
+                        if (editedTransaction.TranzactionId == 0)
                         {
                             AddTransactionToDatabase(editedTransaction);
                         }
-                        else // Иначе это редактирование существующей записи
+                        else 
                         {
                             UpdateTransactionInDatabase(editedTransaction);
                         }
 
-                        LoadData(); // Обновляем данные в DataGrid
+                        LoadData();
                     }
                 }, DispatcherPriority.Background);
             }

@@ -61,3 +61,13 @@ C:\Users\yoto8\source\repos\CRM\obj\Debug\EventsPage.g.cs
 C:\Users\yoto8\source\repos\CRM\obj\Debug\EventsPage.baml
 C:\Users\yoto8\source\repos\CRM\obj\Debug\TransactionsPage.g.cs
 C:\Users\yoto8\source\repos\CRM\obj\Debug\TransactionsPage.baml
+C:\Users\yoto8\source\repos\CRM\bin\Debug\LiveCharts.dll
+C:\Users\yoto8\source\repos\CRM\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\yoto8\source\repos\CRM\bin\Debug\LiveCharts.pdb
+C:\Users\yoto8\source\repos\CRM\bin\Debug\LiveCharts.xml
+C:\Users\yoto8\source\repos\CRM\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\yoto8\source\repos\CRM\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\yoto8\source\repos\CRM\obj\Debug\AnalyticPage.g.cs
+C:\Users\yoto8\source\repos\CRM\obj\Debug\AnalyticPage.baml
+C:\Users\yoto8\source\repos\CRM\obj\Debug\EmailPage.g.cs
+C:\Users\yoto8\source\repos\CRM\obj\Debug\EmailPage.baml

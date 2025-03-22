@@ -16,7 +16,7 @@ namespace CRM
         public EventsPage()
         {
             InitializeComponent();
-            LoadData(); // Загружаем данные при инициализации страницы
+            LoadData();
         }
 
         private void LoadData()
@@ -55,7 +55,6 @@ namespace CRM
             var selectedDate = EventsCalendar.SelectedDate;
             if (selectedDate.HasValue)
             {
-                // Фильтруем мероприятия по выбранной дате
                 var filteredEvents = events.Where(ev => ev.EventDate.Date == selectedDate.Value.Date).ToList();
                 EventsDataGrid.ItemsSource = filteredEvents;
             }
@@ -113,7 +112,6 @@ namespace CRM
             events.Add(newEvent);
             EventsDataGrid.ItemsSource = events.Where(ev => ev.EventDate.Date == newEvent.EventDate.Date).ToList();
 
-            // Очищаем поля ввода
             TitleTextBox.Clear();
             DescriptionTextBox.Clear();
             StartDatePicker.SelectedDate = null;

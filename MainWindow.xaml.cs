@@ -23,6 +23,7 @@ namespace CRM
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new ClientsPage());
         }
 
         private void ClientsButton_Click(object sender, RoutedEventArgs e)
@@ -38,6 +39,16 @@ namespace CRM
         private void TransactionsButton_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new TransactionsPage());
+        }
+
+        private void AnalyticButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new AnalyticPage());
+        }
+
+        private void EmailButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new EmailPage());
         }
     }
 }

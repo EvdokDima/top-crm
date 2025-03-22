@@ -21,9 +21,9 @@ namespace CRM
             {
                 using (var conn = new NpgsqlConnection(connectionString))
                 {
-                    conn.Open(); // Проверяем подключение
+                    conn.Open();
                 }
-                LoadData(); // Загружаем данные при инициализации страницы
+                LoadData();
             }
             catch (Exception ex)
             {
