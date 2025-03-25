@@ -11,7 +11,7 @@ namespace CRM
     public partial class EventsPage : Page
     {
         private List<Event> events = new List<Event>();
-        private readonly string connectionString = "Host=rc1a-pqvpr43vs961p74p.mdb.yandexcloud.net;Port=6432;Username=user;Password=postgres;Database=crm;";
+        private string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=crm;";
 
         public EventsPage()
         {

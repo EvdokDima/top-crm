@@ -23,7 +23,7 @@ namespace CRM
         {
             try
             {
-                string connectionString = "Host=rc1a-pqvpr43vs961p74p.mdb.yandexcloud.net;Port=6432;Username=user;Password=postgres;Database=crm;";
+               string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=crm;";
 
                 using (var conn = new NpgsqlConnection(connectionString))
                 {
@@ -82,7 +82,6 @@ namespace CRM
 
             try
             {
-                // Настройки SMTP (пример для Gmail)
                 var smtpClient = new SmtpClient("smtp.yandex.ru")
                 {
                     Port = 25,

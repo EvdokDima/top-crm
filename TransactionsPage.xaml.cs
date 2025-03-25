@@ -22,7 +22,7 @@ namespace CRM
     /// </summary>
     public partial class TransactionsPage : Page
     {
-        private string connectionString = "Host=rc1a-pqvpr43vs961p74p.mdb.yandexcloud.net;Port=6432;Username=user;Password=postgres;Database=crm;";
+        private string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=crm;";
 
         public TransactionsPage()
         {
