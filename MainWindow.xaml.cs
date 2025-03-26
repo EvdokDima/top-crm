@@ -50,5 +50,10 @@ namespace CRM
         {
             MainFrame.Navigate(new EmailPage());
         }
+
+        private void SurveyButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new SurveyCreatePage());
+        }
     }
 }

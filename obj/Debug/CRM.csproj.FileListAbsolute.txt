@@ -71,3 +71,13 @@ C:\Users\yoto8\source\repos\CRM\obj\Debug\AnalyticPage.g.cs
 C:\Users\yoto8\source\repos\CRM\obj\Debug\AnalyticPage.baml
 C:\Users\yoto8\source\repos\CRM\obj\Debug\EmailPage.g.cs
 C:\Users\yoto8\source\repos\CRM\obj\Debug\EmailPage.baml
+C:\Users\yoto8\source\repos\CRM\obj\Debug\SurveyCreatePage.baml
+C:\Users\yoto8\source\repos\CRM\obj\Debug\SurveySendPage.baml
+C:\Users\yoto8\source\repos\CRM\obj\Debug\SurveysListPage.baml
+C:\Users\yoto8\source\repos\CRM\obj\Debug\SurveyCreatePage.g.cs
+C:\Users\yoto8\source\repos\CRM\obj\Debug\SurveySendPage.g.cs
+C:\Users\yoto8\source\repos\CRM\obj\Debug\SurveysListPage.g.cs
+C:\Users\yoto8\source\repos\CRM\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\yoto8\source\repos\CRM\bin\Debug\itextsharp.dll
+C:\Users\yoto8\source\repos\CRM\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\yoto8\source\repos\CRM\bin\Debug\itextsharp.xml

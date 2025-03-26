@@ -17,19 +17,15 @@ namespace CRM
         {
             InitializeComponent();
 
-            // Загружаем данные для диаграммы
             LoadData();
 
-            // Устанавливаем DataContext для привязки данных
             DataContext = this;
         }
 
         private void LoadData()
         {
-            // Получаем данные из базы данных
             var clientTotals = GetClientTotalsFromDatabase();
 
-            // Создаем коллекцию для диаграммы
             SeriesCollection = new SeriesCollection();
 
             foreach (var clientTotal in clientTotals)
@@ -47,7 +43,7 @@ namespace CRM
         {
             var clientTotals = new List<ClientTotal>();
 
-           string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=crm;";
+            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=crm;";
 
             try
             {

@@ -19,6 +19,7 @@
             <Button x:Name="EventsButton" Height="50" Width="200" Content="Мероприятия" FontSize="16" Margin="20" Background="Gray" BorderBrush="Gray" Click="EventsButton_Click"/>
             <Button x:Name="AnalyticButton" Height="50" Width="200" Content="Аналитика" FontSize="16" Margin="20" Background="Gray" BorderBrush="Gray" Click="AnalyticButton_Click"/>
             <Button x:Name="EmailButton" Height="50" Width="200" Content="Рассылка" FontSize="16" Margin="20" Background="Gray" BorderBrush="Gray" Click="EmailButton_Click"/>
+            <Button x:Name="SurveyButton" Height="50" Width="200" Content="Опрос" FontSize="16" Margin="20" Background="Gray" BorderBrush="Gray" Click="SurveyButton_Click"/>
         </StackPanel>
 
         <Frame x:Name="MainFrame" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>

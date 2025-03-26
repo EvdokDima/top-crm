@@ -1,0 +1,76 @@
+﻿<Page x:Class="CRM.SurveysListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="Список опросов">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Панель фильтров -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top">
+            <TextBlock Text="Фильтр:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <ComboBox x:Name="StatusFilterComboBox" Width="150" SelectedIndex="0">
+                <ComboBoxItem Content="Все опросы"/>
+                <ComboBoxItem Content="Только активные"/>
+                <ComboBoxItem Content="Только черновики"/>
+            </ComboBox>
+            <Button Content="Применить" Margin="10,0,0,0" Width="80" Click="ApplyFilter_Click"/>
+            <Button Content="Сбросить" Margin="10,0,0,0" Width="80" Click="ResetFilter_Click"/>
+        </StackPanel>
+
+        <!-- Список опросов с прокруткой -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,10">
+            <DataGrid x:Name="SurveysDataGrid" AutoGenerateColumns="False" CanUserAddRows="False"
+                      SelectionMode="Single" Width="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding SurveyId}" Width="50"/>
+                    <DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="200"/>
+                    <DataGridTextColumn Header="Дата создания" Binding="{Binding CreatedAt, StringFormat={}{0:dd.MM.yyyy}}" Width="120"/>
+                    <DataGridCheckBoxColumn Header="Активный" Binding="{Binding IsActive}" Width="80"/>
+                    <DataGridTextColumn Header="Вопросов" Binding="{Binding QuestionsCount}" Width="80"/>
+                    <DataGridTextColumn Header="Ответов" Binding="{Binding ResponsesCount}" Width="80"/>
+                    <DataGridTemplateColumn Header="Действия" Width="300">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="0">
+                                    <Button Content="Просмотр" 
+                        Width="70" 
+                        Margin="2,0" 
+                        Padding="2"
+                        Click="ViewSurvey_Click" 
+                        Tag="{Binding SurveyId}"/>
+                                    <Button Content="Отчет" 
+                        Width="60" 
+                        Margin="2,0" 
+                        Padding="2"
+                        Click="ViewReport_Click" 
+                        Tag="{Binding SurveyId}"/>
+                                    <Button Content="Рассылка" 
+                        Width="75" 
+                        Margin="2,0" 
+                        Padding="2"
+                        Click="SendSurvey_Click" 
+                        Tag="{Binding SurveyId}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+
+        <!-- Панель управления -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10">
+            <Button Content="Новый опрос" Width="120" Margin="0,0,10,0" Click="CreateNewSurvey_Click"/>
+            <Button Content="Обновить" Width="80" Click="RefreshList_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
